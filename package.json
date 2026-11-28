@@ -1,0 +1,22 @@
+{
+  "name": "browser-assistant",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "A browser assistant for reading websites, reading documents and preparing editable forms.",
+  "scripts": {
+    "start": "node src/agent.mjs",
+    "models": "node src/agent.mjs --list-models",
+    "ocr": "node src/ocr-pdf.mjs",
+    "form": "node src/stagehand-form.mjs",
+    "form:check": "node src/stagehand-form.mjs --prepare-only --headless"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "^4.4.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@napi-rs/canvas": "^0.1.100",
+    "dotenv": "^16.4.7",
+    "pdfjs-dist": "^5.4.449",
+    "zod": "^4.6.6"
+  }
+}
